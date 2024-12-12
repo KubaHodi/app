@@ -70,6 +70,6 @@ class ProductsController < ApplicationController
     end
 
     def set_categories
-      @categories = Category.all
+      @categories = Category.all.order(:name)
     end
 end

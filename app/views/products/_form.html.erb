@@ -37,8 +37,8 @@
     <%= form.text_field :price %>
   </div>
 <div>
-    <%= form.label :category.name, style: "display: block" %>
-    <%= form.text_field :category.name %>
+    <%= form.label :category, style: "display: block" %>
+    <%= form.select :category_id, options_for_select(@categories.collect { |cat| [cat.name, cat.id] }) %>
   </div>
   <div>
     <%= form.submit %>
