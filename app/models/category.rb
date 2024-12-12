@@ -1,2 +1,2 @@
 class Category < ApplicationRecord
-end
+  validates :name, presence: true, uniqueness: true
