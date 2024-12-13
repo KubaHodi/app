@@ -2,7 +2,7 @@
 <ul class="list-group list-group-horizontal">
 <% @categories.each do |cat| %>
 <li class= "list-group-item">
-<%= link_to root_path do%>
+<%= link_to catalog_index_path(category_id: cat), data: { turbo_method: :get } do %>
 <%=image_tag(cat.name+".png", alt: "#{cat.name} image", class:"img-fluid")%>
 <%end%>
 </li>

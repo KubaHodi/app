@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "support/index"
+  get "catalog/index"
   resources :categories
   resources :products
   root to: "home#index"
