@@ -38,8 +38,8 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to category_url(@category)
   end
 
-  test "should destroy category" do
-    assert_difference("Category.count", -1) do
+  test "should not destroy category with assigned product" do
+    assert_difference("Category.count") do
       delete category_url(@category)
     end
 
