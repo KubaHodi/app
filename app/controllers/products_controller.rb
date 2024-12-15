@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: %i[ show edit update destroy ]
   before_action :set_categories
+  before_action :set_genres
   # GET /products or /products.json
   def index
     @products = Product.all
@@ -66,10 +67,14 @@ class ProductsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def product_params
-      params.expect(product: [ :name, :description, :image_url, :brand, :price, :category_id ])
+      params.expect(product: [ :name, :description, :image_url, :brand, :price, :category_id, :genre_id ])
     end
 
     def set_categories
       @categories = Category.all.order(:name)
+    end
+
+    def set_genres
+      @genres = Genre.all.order(:name)
     end
 end

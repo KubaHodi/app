@@ -1,6 +1,6 @@
 class Product < ApplicationRecord
-  belongs_to :category
-  
+  belongs_to :category 
+  belongs_to :genre
   validates :name, :description, :image_url, :brand, :price, presence: true
   validates :name, uniqueness: true
   validates :image_url, format:{

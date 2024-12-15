@@ -36,9 +36,15 @@
     <%= form.label :price, style: "display: block" %>
     <%= form.text_field :price %>
   </div>
-<div>
+
+  <div>
     <%= form.label :category, style: "display: block" %>
     <%= form.select :category_id, options_for_select(@categories.collect { |cat| [cat.name, cat.id] }) %>
+  </div>
+
+  <div>
+    <%= form.label :genre, style: "display: block" %>
+    <%= form.select :genre_id, options_for_select(@genres.collect { |g| [g.name, g.id] })%>
   </div>
   <div>
     <%= form.submit %>
