@@ -1,5 +1,5 @@
 <h1 class="text-center" >Now you are searching in <b><%= @categories.name %></b> category</h1>
 <h1 class="text-center">Select music genre that you want to browse <b><%=pluralize(@categories.products.count,@categories.name)%></b> in</h1>
-<% @categories.products.each do |product|%>
-<%=product.name%>
+<% @genres.each do |g| %>
+<%= link_to g.name, genrecatalog_index_path(genre_id: g) %>
 <%end%>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "genrecatalog/index"
   resources :genres
   get "support/index"
   get "catalog/index"
