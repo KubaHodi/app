@@ -1,4 +1,5 @@
 class CatalogController < ApplicationController
+  skip_before_action :authorize
   def index
     @products = Product.all
     @categories = Category.find_by_id(params[:category_id])

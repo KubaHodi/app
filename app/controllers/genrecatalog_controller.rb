@@ -1,4 +1,5 @@
 class GenrecatalogController < ApplicationController
+  skip_before_action :authorize
   def index
     current_genre_id = Genre.find_by_id(params[:genre_id])
     current_category_id = $cat_id
