@@ -1,0 +1,2 @@
+- Make images hoverable
+- Make prettier listing of genres
