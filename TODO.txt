@@ -1,3 +1,2 @@
 - Make images hoverable
 - Make prettier listing of genres
-- Make products, categories and genres CUD not accesible for user (Admin panel + authorization)
