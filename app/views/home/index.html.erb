@@ -3,7 +3,7 @@
 <% @categories.each do |cat| %>
 <li class= "list-group-item">
 <%= link_to catalog_index_path(category_id: cat), data: { turbo_method: :get } do %>
-<%=image_tag(cat.name+".png", alt: "#{cat.name} image", class:"img-fluid")%>
+<%=image_tag(cat.name+".png", alt: "#{cat.name} image", class:"img-fluid", :style => "style_image")%>
 <%end%>
 </li>
 <%end%>
