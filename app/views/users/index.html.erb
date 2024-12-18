@@ -1,8 +1,10 @@
-<p class="bg-danger text-white border border-danger" style="--bs-bg-opacity: .2;"><%= notice %></p>
+<% if alert.present? %>
+    <p class="alert"><%=alert%></p>
+<%end%>
 
 <% content_for :title, "Users" %>
 
-<h1>Users</h1>
+<h1 class="text-center" >Users</h1>
 
 <div id="users">
   <% @users.each do |user| %>

@@ -2,15 +2,22 @@
 
 <% content_for :title, "Genres" %>
 
-<h1>Genres</h1>
-
-<div id="genres">
+<h1 class="text-center">Genres Editor</h1>
+  <table class="table table-striped table-dark table-hover">
+  <thead class="thead-dark">
+  <tr> <th>#</th> <th>Name</th> <th>Actions</th> </tr>
+  </thead>
   <% @genres.each do |genre| %>
-    <%= render genre %>
-    <p>
-      <%= link_to "Show this genre", genre %>
-    </p>
+  <tbody>
+    <tr>
+      <td><%= genre.id %></td>
+      <td><%= genre.name %></td>
+      <td>
+        <%= link_to "Edit", edit_genre_path(genre), method: :get, class: "btn btn-outline-info"%>
+        <%= link_to "Delete", genre, class: "btn btn-outline-danger", data: {turbo_method: :delete, turbo_confirm: 'Are you sure?' }%>
+      </td>
+    </tr>
+    <tbody>
   <% end %>
-</div>
-
-<%= link_to "New genre", new_genre_path %>
+</table>
+<%= link_to "New genre", new_genre_path, class: "btn btn-success" %>

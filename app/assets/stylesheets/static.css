@@ -1,0 +1,21 @@
+p.alert{
+    background-color: rgb(220, 53, 70, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    font-size: 20pt;
+    font-weight: bolder;
+    border: rgb(220, 53, 70) solid 2px;
+
+}
+
+notice{
+    background-color: rgb(24, 135, 84, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    font-size: 20pt;
+    font-weight: bolder;
+    border: rgb(24, 135, 84) solid 2px;
+
+}
