@@ -1,14 +1,15 @@
 <%if notice.present?%>
 <p class="alert alert-success"><%=notice  %></p>
 <%end%>
-<h1>Catalog</h1>
-<ul class="list-group list-group-horizontal">
-<% @categories.each do |cat| %>
-<li class= "list-group-item">
-<div class="hovereffect">
-<%= link_to catalog_index_path(category_id: cat), data: { turbo_method: :get } do %>
-<%=image_tag(cat.name+".png", alt: "#{cat.name} image", class:"img-fluid")%>
+<h1 class="text-center">Catalog</h1>
+
+    <% @categories.each do |cat| %>
+    
+    <div class="imagezoom">
+    <%= link_to catalog_index_path(category_id: cat), data: { turbo_method: :get } do %>
+    <%=image_tag(cat.name+".png", alt: "#{cat.name} image", class: "img-fluid")%>
+    </div>
+    <%end%>
 <%end%>
-</li>
-<%end%>
-</ul>
+
+
