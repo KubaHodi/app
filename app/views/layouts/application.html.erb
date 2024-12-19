@@ -22,8 +22,8 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_importmap_tags %>
   </head>
+  
   <%= render "navbars/nav"%>
-
   <% if session[:user_id].nil?%>
   <%= render "navbars/navuser"%>
   <%end%>

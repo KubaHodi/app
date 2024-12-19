@@ -1,17 +1,22 @@
 <div>
-<% if notice.present? %>
-    <p><%=notice%></p>
+<% if flash[:alert] %>
+    <p class="alert alert-danger" id="alert" ><%=alert%></p>
 <%end%>
 
 <%= form_tag do %>
+<div class="container-fluid text-center fs-2">
     <h2>Please Log In</h2>
+    <div class="m-4">
     <%= label_tag :name, "Name:" %>
     <%= text_field_tag :name, params[:name], style: "display-block"%>
+    </div>
 
+    <div class="m-4">
     <%= label_tag :password, "Password"%>
     <%= password_field_tag :password, params[:password], style: "display-block" %>
-        
-    <%=submit_tag "Login", class: "btn btn-success"%>
+    </div> 
+    <%=submit_tag "Login", class: "btn btn-success btn-lg"%>
+</div>
 <%end%>
 
 </div>
