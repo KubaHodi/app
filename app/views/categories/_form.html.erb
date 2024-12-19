@@ -1,22 +1,27 @@
 <%= form_with(model: category) do |form| %>
   <% if category.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
+    <div class="bg-danger border border-danger" style="--bs-bg-opacity: .3;">
+      <h2 class="text-danger"><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
 
       <ul>
         <% category.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+          <li class="text-danger"><%= error.full_message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
-
+<div class="container-fluid text-center fs-2">
   <div>
-    <%= form.label :name, style: "display: block" %>
+    <%= form.label :name, style: "display: block", class: "form-label" %>
     <%= form.text_field :name %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-success" %>
   </div>
+
+   <div>
+  <%= link_to "Back to products", categories_path, class: "btn btn-dark" %>
+  </div>
+</div>
 <% end %>

@@ -1,33 +1,39 @@
 
 <%= form_with(model: user) do |form| %>
   <% if user.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+     <div class="bg-danger border border-danger" style="--bs-bg-opacity: .3;">
+      <h2 class="text-danger"><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
       <ul>
         <% user.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+          <li class="text-danger"><%= error.full_message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
-
+  <div class="container-fluid text-center fs-2">
   <div>
-    <%= form.label :name, style: "display: block" %>
+    <%= form.label :name, style: "display: block", class: "form-label" %>
     <%= form.text_field :name %>
   </div>
 
   <div>
-    <%= form.label :password, style: "display: block" %>
+    <%= form.label :password, style: "display: block", class: "form-label" %>
     <%= form.password_field :password %>
   </div>
 
   <div>
-    <%= form.label :password_confirmation, style: "display: block" %>
+    <%= form.label :password_confirmation, style: "display: block", class: "form-label" %>
     <%= form.password_field :password_confirmation %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-success" %>
   </div>
+
+  <div>
+  <%=link_to "Back to users", users_path, class: "btn btn-dark" %>
+  </div>
+
+</div>
 <% end %>
