@@ -1,6 +1,6 @@
 <%= stylesheet_link_tag :application%> 
-<h1 class="text-center" >Now you are searching in <b><%= @categories.name %></b> category</h1>
-<h1 class="text-center">Select music genre that you want to browse <b><%=pluralize(@categories.products.count,@categories.name)%></b> in</h1>
+<h1 class="text-center" >Now you are searching in <b><%= @category.name %></b> category</h1>
+<h1 class="text-center">Select music genre that you want to browse <b><%=pluralize(@category.products.count,@category.name)%></b> in</h1>
 
 <% @genres.each do |g| %>
 <%= link_to g.name, genrecatalog_index_path(genre_id: g), class: "border border-danger btn btn-dark vw-100 border border-danger text-center genre_container", style: "height: 300px" %>
