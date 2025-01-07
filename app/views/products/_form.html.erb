@@ -1,5 +1,5 @@
 
-<%= form_with(model: product) do |form|%>
+<%= form_with(model: product ) do |form|%>
   <% if product.errors.any? %>
     <div class="bg-danger border border-danger" style="--bs-bg-opacity: .3;">
       <h2 class="text-danger"><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
@@ -23,8 +23,8 @@
   </div>
 
   <div>
-    <%= form.label :image_url, style: "display: block", class: "form-label" %>
-    <%= form.text_field :image_url %>
+    <%= form.label "Obraz", style: "display: block", class: "form-label" %>
+    <%= form.file_field :cover_image %>
   </div>
 
   <div>
