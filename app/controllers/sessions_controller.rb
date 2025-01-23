@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
     redirect_to root_url, notice: "Successfully Logged Out"
   end
 
-  private 
+  private
   def find_user
     $user_id_for_display = session[:user_id]
   end
