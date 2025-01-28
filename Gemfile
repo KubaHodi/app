@@ -17,6 +17,10 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+#file validation
+gem 'active_storage_validations'
+gem "file_validators"
+
 gem 'bootstrap', '~> 5.3.3'
 gem 'sassc-rails'
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]

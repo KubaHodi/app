@@ -1,4 +1,4 @@
-
+<div class = "p-4 mb-4 bg-dark-subtle">
 <%= form_with(model: product ) do |form|%>
   <% if product.errors.any? %>
     <div class="bg-danger border border-danger" style="--bs-bg-opacity: .3;">
@@ -23,7 +23,7 @@
   </div>
 
   <div>
-    <%= form.label "Obraz", style: "display: block", class: "form-label" %>
+    <%= form.label "Image", style: "display: block", class: "form-label" %>
     <%= form.file_field :cover_image %>
   </div>
 
@@ -46,7 +46,7 @@
     <%= form.label :genre, style: "display: block", class: "form-label" %>
     <%= form.select :genre_id, options_for_select(@genres.collect { |g| [g.name, g.id] })%>
   </div>
-  <div> 
+  <div>
     <%= form.submit class: "btn btn-success"%>
   </div>
 
@@ -56,3 +56,4 @@
 
 </div>
 <% end %>
+</div>
