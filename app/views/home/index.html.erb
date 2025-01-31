@@ -3,13 +3,14 @@
 <% end %>
 <h1 class="text-center">Catalog</h1>
 
-    <% @categories.each do |cat| %>
-    
-    <div class="imagezoom">
-    <%= link_to catalog_index_path(category_id: cat), data: { turbo_method: :get } do %>
-    <%=image_tag(cat.name+".png", alt: "#{cat.name} image", class: "img-fluid")%>
-    </div>
-    <%end%>
+<div class="catdiv">
+        <% @categories.each do |cat| %>
+        <%= link_to catalog_index_path(category_id: cat), data: { turbo_method: :get } do %>
+            <% if cat.category_image.attached? %>
+                <%= image_tag cat.category_image, class: "img-thumbnail" %>
+            <% else %>
+                <p>Couldn't find image<p>
+                <% end %>
+        <%end%>
+</div>
 <%end%>
-
-

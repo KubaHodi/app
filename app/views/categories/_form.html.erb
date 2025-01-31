@@ -17,6 +17,11 @@
   </div>
 
   <div>
+    <%= form.label :category_image, style: "display: block", class: "form-label" %>
+    <%= form.file_field :category_image %>
+  </div>
+
+  <div>
     <%= form.submit class: "btn btn-success" %>
   </div>
 
