@@ -4,6 +4,8 @@ one:
   name: MyString
   description: MyText
   image_url: MyString
+  genre: one
+  category: one
   brand: MyString
   price: 9.99
 
@@ -11,5 +13,7 @@ two:
   name: MyString
   description: MyText
   image_url: MyString
+  genre: two
+  category: two
   brand: MyString
   price: 9.99
