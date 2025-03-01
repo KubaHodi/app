@@ -9,7 +9,7 @@
             <% if cat.category_image.attached? %>
                 <%= image_tag cat.category_image, class: "img-thumbnail" %>
             <% else %>
-                <p>Couldn't find image<p>
+                <p>Couldn't find image for <%= cat.name %> category <p>
                 <% end %>
         <%end%>
 </div>

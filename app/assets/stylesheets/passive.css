@@ -17,7 +17,8 @@
 .catdiv {
     width: 100px;
     height: 100px;
-    background-color: aqua;
+    float: left;
+    margin: 10px;
 }
 .catimage {
     width: 100px;
